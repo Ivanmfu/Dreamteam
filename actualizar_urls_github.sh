@@ -6,7 +6,7 @@ echo "🔗 Actualizando URLs para GitHub Pages..."
 echo "=========================================="
 
 # URL base del sitio en GitHub Pages
-GITHUB_URL="https://ivanmfu.github.io/videosangy"
+GITHUB_URL="https://ivanmfu.github.io/videoselena"
 
 # Lista de videos con sus títulos actuales
 declare -A video_titles=(
@@ -52,7 +52,7 @@ echo ""
 echo "🎉 ¡Actualización de URLs completada!"
 echo ""
 echo "📋 Cambios realizados:"
-echo "   🔗 tudominio.com → ivanmfu.github.io/videosangy"
+echo "   🔗 tudominio.com → ivanmfu.github.io/videoselena"
 echo "   📱 Meta tags actualizados para redes sociales"
 echo "   🎬 URLs de videos corregidas"
 echo "   💾 Backups creados con extensión .github_backup"
