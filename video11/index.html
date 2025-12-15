@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vídeo 11 - Galería de Videos</title>
+  <meta name="description" content="Mira este video: Vídeo 11">
+  <meta property="og:title" content="Vídeo 11">
+  <meta property="og:description" content="Mira este video en nuestra galería">
+  <meta property="og:type" content="video.other">
+  <meta property="og:url" content="https://ivanmfu.github.io/Dreamteam/video11/">
+  <meta property="og:video" content="https://ivanmfu.github.io/Dreamteam/video11/video11.MP4">
+  <meta property="og:video:type" content="video/mp4">
+
+  <style>
+    body { background:#000; color:#fff; font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; margin:0; }
+    .header { padding:20px; background:#111; border-bottom:1px solid #333; }
+    .title { font-size:22px; color:#00ffc8; margin:0; }
+    .back-link{ color:#00ffc8; text-decoration:none }
+    .video-container{ display:flex; justify-content:center; padding:20px }
+    video{ width:100%; max-width:640px; border-radius:12px }
+    .video-placeholder{ text-align:center; color:#bbb }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;">
+      <h1 class="title">Vídeo 11</h1>
+      <a class="back-link" href="../">← Galería</a>
+    </div>
+  </div>
+
+  <div class="video-container">
+    <div>
+      <video controls autoplay playsinline preload="auto" id="mainVideo">
+        <source src="video11.MP4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+
+      <div class="video-placeholder" id="placeholder">
+        <h3 style="color:#00ffc8">Video pendiente</h3>
+        <p style="color:#bbb">Sube tu archivo como <strong>video11.MP4</strong> dentro de esta carpeta.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const video = document.getElementById('mainVideo');
+      const placeholder = document.getElementById('placeholder');
+      video.addEventListener('error', ()=>{ video.style.display='none'; if(placeholder) placeholder.style.display='block'; });
+      video.addEventListener('loadeddata', ()=>{ if(placeholder) placeholder.style.display='none'; video.style.display='block'; });
+    });
+  </script>
+</body>
+</html>
